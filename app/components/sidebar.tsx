@@ -1,4 +1,5 @@
 import { useEffect, useRef, useMemo } from "react";
+import Image from 'next/image'
 
 import styles from "./home.module.scss";
 
@@ -155,17 +156,17 @@ export function SideBar(props: { className?: string }) {
     >
       <div className={styles["sidebar-header"]} data-tauri-drag-region>
         <div className={styles["sidebar-title"]} data-tauri-drag-region>
-          NextChat
+          Consultant guide
         </div>
-        <div className={styles["sidebar-sub-title"]}>
-          Build your own AI assistant.
-        </div>
+        {/*<div className={styles["sidebar-sub-title"]}>*/}
+        {/*  Build your own AI assistant.*/}
+        {/*</div>*/}
         <div className={styles["sidebar-logo"] + " no-dark"}>
-          <ChatGptIcon />
+          <Image src={"/logo-all.png"} alt={""} width={120} height={40}  />
         </div>
       </div>
 
-      <div className={styles["sidebar-header-bar"]}>
+     {/* <div className={styles["sidebar-header-bar"]}>
         <IconButton
           icon={<MaskIcon />}
           text={shouldNarrow ? undefined : Locale.Mask.Name}
@@ -186,7 +187,7 @@ export function SideBar(props: { className?: string }) {
           onClick={() => showToast(Locale.WIP)}
           shadow
         />
-      </div>
+      </div>*/}
 
       <div
         className={styles["sidebar-body"]}
@@ -211,7 +212,7 @@ export function SideBar(props: { className?: string }) {
               }}
             />
           </div>
-          <div className={styles["sidebar-action"]}>
+{/*          <div className={styles["sidebar-action"]}>
             <Link to={Path.Settings}>
               <IconButton icon={<SettingsIcon />} shadow />
             </Link>
@@ -220,7 +221,7 @@ export function SideBar(props: { className?: string }) {
             <a href={REPO_URL} target="_blank" rel="noopener noreferrer">
               <IconButton icon={<GithubIcon />} shadow />
             </a>
-          </div>
+          </div>*/}
         </div>
         <div>
           <IconButton
