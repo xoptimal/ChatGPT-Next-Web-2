@@ -1172,18 +1172,7 @@ function _Chat() {
                       {isUser ? (
                         <Avatar avatar={config.avatar} />
                       ) : (
-                        <>
-                          {["system"].includes(message.role) ? (
-                              <Image src={"/logo.png"} alt={""} width={24} height={24}  />
-                          ) : (
-                            <MaskAvatar
-                              avatar={session.mask.avatar}
-                              model={
-                                message.model || session.mask.modelConfig.model
-                              }
-                            />
-                          )}
-                        </>
+                          <Image src={"/logo.png"} alt={""} width={24} height={24}  />
                       )}
                     </div>
 
