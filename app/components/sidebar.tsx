@@ -162,7 +162,7 @@ export function SideBar(props: { className?: string }) {
         {/*  Build your own AI assistant.*/}
         {/*</div>*/}
         <div className={styles["sidebar-logo"] + " no-dark"}>
-          <Image src={"/logo-all.png"} alt={""} width={120} height={40}  />
+          <Image src={"/logo.png"} alt={""} width={40} height={40}  />
         </div>
       </div>
 
